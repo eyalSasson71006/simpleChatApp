@@ -1,0 +1,43 @@
+  body {
+      font-family: Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #8f8f8f;
+  }
+
+  .chat-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90vh;
+      width: 50%;
+      padding: 16px;
+  }
+
+  .chat-window {
+      background-color: #dadada;
+      flex-grow: 1;
+      padding: 16px;
+      overflow-y: auto;
+      margin-bottom: 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+  }
+
+  .chat-window p {
+      margin: 8px 0;
+  }
+
+  .input-container {
+      display: flex;
+      gap: 8px;
+  }
+
+  .input-container input {
+      flex-grow: 1;
+  }
