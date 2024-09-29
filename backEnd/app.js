@@ -14,10 +14,14 @@ const io = socketIo(server, {
     }
 });
 
+let messages = [];
+
 io.on("connection", (stream) => {
     console.log("User connected");
+    io.emit("past messages", messages);
 
     stream.on("message sent", (message) => {
+        messages.push(message);
         io.emit("message received", message);
     });
 

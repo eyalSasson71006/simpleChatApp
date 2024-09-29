@@ -11,6 +11,7 @@ function printMessage(msg) {
     const { username, messageText, time } = msg;
     let message = document.createElement("div");
     message.innerHTML = `<span class="username">${username}</span> <span class="time">${time}</span> <span class="message">${messageText}</span>`;
+    if (username === usernameInput.value) message.classList.add("host");
     chatWindow.appendChild(message);
 };
 
@@ -37,4 +38,9 @@ usernameInput.addEventListener("input", () => {
 
 socket.on("message received", (message) => {
     printMessage(message);
+});
+
+socket.on("past messages", (messages) => {
+    chatWindow.innerHTML = "";
+    messages.forEach(message => printMessage(message));
 });

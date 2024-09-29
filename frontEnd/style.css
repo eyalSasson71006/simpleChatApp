@@ -61,8 +61,8 @@
     left: 20px;
   }
 
-  .chat-window p.host {
-      background-color: #4863ff;
+  .chat-window div.host {
+      background-color: #87ea6e;
       align-self: end;
   }
 
