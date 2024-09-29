@@ -31,12 +31,18 @@
       border-radius: 8px;
   }
 
-  .chat-window p {
-      margin: 8px 0;
-      padding: 7px;
-      border-radius: 10px;
+  .chat-window div {
       width: fit-content;
-      background-color: #bbb;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      max-width: 80%;
+      min-height: 35px;
+      word-wrap: break-word;
+      font-family: 'Arial', sans-serif;
+      position: relative;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
   .input-container {
@@ -48,7 +54,35 @@
       flex-grow: 1;
   }
 
+  .username-input{
+    position: absolute;
+    width: 100px;
+    top: 20px;
+    left: 20px;
+  }
+
   .chat-window p.host {
       background-color: #4863ff;
       align-self: end;
+  }
+
+  .chat-window .username {
+      font-weight: bold;
+      font-size: 14px;
+      color: #0078d7;
+      margin-bottom: 5px;
+  }
+
+  .chat-window .time {
+      font-size: 12px;
+      color: #999;
+      position: absolute;
+      bottom: 5px;
+      right: 10px;
+  }
+
+  .chat-window .message {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #333;
   }
