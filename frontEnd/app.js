@@ -40,7 +40,6 @@ socket.on("message received", (message) => {
     printMessage(message);
 });
 
-socket.on("past messages", (messages) => {
-    chatWindow.innerHTML = "";
-    messages.forEach(message => printMessage(message));
+socket.on("recover history", (history) => {
+    history.forEach(printMessage);
 });

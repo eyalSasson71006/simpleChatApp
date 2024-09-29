@@ -14,14 +14,14 @@ const io = socketIo(server, {
     }
 });
 
-let messages = [];
+let chatHistory = [];
 
 io.on("connection", (stream) => {
     console.log("User connected");
-    io.emit("past messages", messages);
+    stream.emit("recover history", chatHistory);
 
     stream.on("message sent", (message) => {
-        messages.push(message);
+        chatHistory.push(message);
         io.emit("message received", message);
     });
 
